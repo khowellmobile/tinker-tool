@@ -39,6 +39,14 @@
  * - loadSettingsFromStorage(): Loads settings from storage
  */
 
+/* All Dev JS below here */
+
+function foo() {
+    console.log("Hello World!");
+}
+
+/* All Dev JS above here */
+
 // Save input values before refresh
 $(window).on("beforeunload", function () {
     saveSlidersToStorage();
@@ -374,13 +382,13 @@ function addTinkerSlider() {
                     type="text"
                     class="css-selector-input tinker-text-input tinker-text-input__full"
                     spellcheck="false"
-                    placeholder="Selector"
+                    placeholder=".example-class"
                 />
                 <input
                     type="text"
                     class="css-property-input tinker-text-input tinker-text-input__full"
                     spellcheck="false"
-                    placeholder="Property"
+                    placeholder="padding"
                 />
                 <span>
                     <input
