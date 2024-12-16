@@ -132,6 +132,10 @@ function attachEventListeners() {
     attachRangeEventListeners();
     attachButtonEventListeners();
 
+    $(".tinker-background-setting").on("input", function () {
+        $("#dev-container").css("background-color", $(this).val());
+    });
+
     $("#run-css-button").on("click", applyTextAreaCss);
     $("#reset-css-button").on("click", resetCssToBase);
 }
@@ -574,7 +578,7 @@ function resetTinkerButtons() {
 function saveSettingsToStorage() {
     const settingsData = {
         displayMode: $("html").css("--current-display-mode"),
-        backgroundColor: $("dev-container").css("background-color"),
+        backgroundColor: $("#dev-container").css("background-color"),
     };
 
     sessionStorage.setItem("settingsData", JSON.stringify(settingsData));
@@ -591,6 +595,6 @@ function loadSettingsFromStorage() {
     }
 
     if (settingsData && settingsData.backgroundColor) {
-        $("dev-container").css("background-color", settingsData.backgroundColor);
+        $("#dev-container").css("background-color", settingsData.backgroundColor);
     }
 }
