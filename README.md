@@ -19,7 +19,7 @@ This repository contains a simple web-based sandbox that allows developers to cr
 ## Usage
 
 1. Clone the repository to your local machine.
-2. Start a local web development server
+2. Start a local web development server. (or just open tinker.html in your broswer)
 3. Open the server in your broswer and start create components.
 
 ## License
